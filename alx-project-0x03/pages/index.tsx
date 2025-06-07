@@ -12,12 +12,11 @@ export default function Home() {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="text-center">
-        <h1>Welcome to Splash App</h1>
+        <h1> Welcome to Splash App </h1>
         <Button
           buttonLabel="Get Started"
           buttonSize="text-lg"
-         buttonBackgroundColor="blue"
-
+          buttonBackgroundColor="blue"
           action={handleStart}
         />
       </div>
