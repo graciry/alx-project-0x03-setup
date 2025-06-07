@@ -1,12 +1,26 @@
 import React from "react";
-import { PageRouteProps } from "@/interfaces";
+import { useRouter } from "next/router";
+import Button from "@/components/common/Button";
 
-const HomePage: React.FC<PageRouteProps> = ({}) => {
+export default function Home() {
+  const router = useRouter();
+
+  const handleStart = () => {
+    router.push("/get-started");
+  };
+
   return (
-    <div>
-      <h1>Welcome to the Home Page</h1>
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="text-center">
+        <h1>Welcome to Splash App</h1>
+        <Button
+          buttonLabel="Get Started"
+          buttonSize="text-lg"
+         buttonBackgroundColor="blue"
+
+          action={handleStart}
+        />
+      </div>
     </div>
   );
-};
-
-export default HomePage;
+}
